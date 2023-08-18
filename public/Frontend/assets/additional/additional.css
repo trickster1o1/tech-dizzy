@@ -1,0 +1,9 @@
+label.error,span.error{
+	color: #ed0534;
+	font-size: 12px;
+	text-align: right;
+}
+
+span.form-error {
+    color: red;
+}

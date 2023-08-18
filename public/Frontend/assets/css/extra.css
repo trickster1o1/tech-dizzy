@@ -1,0 +1,47 @@
+.extra-wrap {
+    height:910px;
+    overflow:hidden;
+} .banner-thumb-cont {
+    max-height: 306px;
+    width:100%;
+    display:block;
+    overflow:hidden;
+} .prog-thumb-cont {
+    max-height: 306px;
+} .noImg {
+    height: 15em;
+    overflow: hidden;
+} .spcs {
+  margin-top:2em;
+  margin-bottom:5em;
+  padding-top:5em;
+}.cat-img {
+    height: 100%;
+    width:auto;
+}
+.height-fix {
+  overflow: hidden;
+} .height-fix > img {
+  height: 292px !important; 
+  object-fit: cover;
+}.testi-height {
+  height:584px;
+}
+
+@media only screen and (max-width: 767px) {
+  .we-believe-map{
+    background-image:unset !important;
+  }
+  .welcome-one__img img{
+    display: none !important;
+  }
+  #home_gallery{
+    display: none;
+  }
+  .quality-work .quality-work-shape{
+    background-image: unset !important;
+  }
+  .testimonial-one-shape.lazy, .testimonial-one-map.lazy{
+    background-image: unset !important;
+  }
+}

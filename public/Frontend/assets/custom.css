@@ -1,0 +1,19 @@
+.thinking-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    width: 100%;
+    /* font-family: Algerian; */
+    /* font-family: 'Arabic Ramadhan';   */
+    /* font-family: 'Bradley Hand ITC';   */
+    /* font-family: 'Consolas';   */
+    font-family: 'Courier New';  
+    /* font-family: 'OCR A';   */
+    /* font-family: 'Segoe Script';   */
+} .main-headers {
+    font-size: 36pt;
+    margin-top: -2.2em;
+    color: #575757;
+}
