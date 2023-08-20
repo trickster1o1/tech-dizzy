@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Wix+Madefor+Display:wght@400;500;600;700;800&display=swap');
+@import url('global.css');
+* {
+    margin: 0;
+    font-family: 'Inter';
+} h1 {
+    text-align: center;
+}
 .thinking-section {
     display: flex;
     flex-direction: column;
@@ -16,4 +24,53 @@
     font-size: 36pt;
     margin-top: -2.2em;
     color: #575757;
+}.custom-cont {
+    padding: 1em;
 }
+
+/* ------------- Navbar ----------------- */
+
+.header-cont {
+    margin: 0;
+} .top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #6F6363;
+    background: var(--priCol);
+}.bot-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #6F6363;
+    background: var(--priCol);
+
+}
+
+/* -------------------------------------- */
+
+/* -------------- Project ---------------- */
+.project-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+} .project-card > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1em;
+} .project-card > div > div {
+    width: 300px;
+    border-radius: 20px;
+    height: 400px;
+    border: 8px solid #D9D9D9;
+    display: flex;
+    padding: 1em 1em;
+    align-items: flex-end;
+} .project-card > div > div > div {
+    height: 35%;
+} .project-card h4 {
+    margin-bottom: .5em;
+}
+
+/* -------------------------------------- */
