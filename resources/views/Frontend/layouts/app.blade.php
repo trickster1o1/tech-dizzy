@@ -42,9 +42,9 @@
             <img src="{{$siteSetting ? $siteSetting->primary_logo : '/'}}" alt="LOGO">
             <ul>    
                 <li>Home</li>
-                <li>Home</li>
-                <li>Home</li>
-                <li>Home</li>
+                <li>About</li>
+                <li>Blog</li>
+                <li>Vacency</li>
             </ul>   
             <div>
                 Contact Us  <i class="fas fa-arrow-right"></i>
