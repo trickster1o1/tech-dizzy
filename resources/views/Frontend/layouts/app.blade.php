@@ -39,13 +39,7 @@
     {{-- .......... Header ........... --}}
     <section>
         <div class="header-cont">
-            <nav class="top-header custom-cont">
-                <div>Logo</div>
-                <div><i class="fas fa-phone-volume"></i> +977-9810116104</div>
-            </nav>
-            <nav class="bot-header custom-cont">
-                <span>Some cheesy Tagline here.</span>
-            </nav>
+            
         </div>
     </section>
     {{-- .......... Header ........... --}}
