@@ -38,8 +38,17 @@
 <body>
     {{-- .......... Header ........... --}}
     <section>
-        <div class="header-cont">
-            
+        <div class="header-cont custom-cont">
+            <img src="{{$siteSetting ? $siteSetting->primary_logo : '/'}}" alt="LOGO">
+            <ul>    
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+            </ul>   
+            <div>
+                Contact Us  <i class="fas fa-arrow-right"></i>
+            </div>
         </div>
     </section>
     {{-- .......... Header ........... --}}

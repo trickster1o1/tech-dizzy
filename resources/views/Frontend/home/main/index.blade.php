@@ -1,5 +1,6 @@
 @extends('Frontend.layouts.app')
 @section('body')
+    @include('Frontend.home.components.hero')
     @include('Frontend.home.components.projects')
     {{-- <section class="thinking-section">
             <img src="{{$siteSetting ? $siteSetting->primary_logo : '/'}}" alt="-">
