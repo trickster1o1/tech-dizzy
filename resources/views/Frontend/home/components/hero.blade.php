@@ -10,7 +10,7 @@
             </div>
         </div>
         <div>
-            <img src="/uploads/bim.png" alt="-">
+            <img src="uploads/fotoSoh.jpg" alt="-">
         </div>
     </div>
 </section>
