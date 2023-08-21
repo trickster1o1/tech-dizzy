@@ -39,15 +39,15 @@
     {{-- .......... Header ........... --}}
     <section>
         <div class="header-cont custom-cont">
-            <img src="{{$siteSetting ? $siteSetting->primary_logo : '/'}}" alt="LOGO">
-            <ul>    
+            <img class="logo-img" src="{{ $siteSetting ? $siteSetting->primary_logo : '/' }}" alt="LOGO">
+            <ul>
                 <li>Home</li>
                 <li>About</li>
                 <li>Blog</li>
                 <li>Vacency</li>
-            </ul>   
+            </ul>
             <div>
-                Contact Us  <i class="fas fa-arrow-right"></i>
+                Contact Us <i class="fas fa-arrow-right"></i>
             </div>
         </div>
     </section>
@@ -55,7 +55,52 @@
 
     @yield('body')
 
+    {{-- --------- Footer ------------ --}}
+    <section>
+        <div class="footer-cont custom-cont">
+            <div>
+                <div class="logo-cont">
+                    <img class="logo-img" src="{{ $siteSetting ? $siteSetting->primary_logo : '/' }}" alt="">
+                </div>
+                <p>Uplift is a cheerful, no-nonsense Webflow Template for fast-growing businesses and startups.</p>
+            </div>
+            <div class="foot-menu">
+                <div>
+                    <ul>
+                        <li><b>Home</b></li>
+                        <li>Home</li>
+                        <li>Home</li>
+                        <li>Home</li>
+                        <li>Home</li>
+                    </ul>
+                </div>
 
+                <div>
+
+                    <ul>
+                        <li><b>Home</b></li>
+                        <li>Home</li>
+                        <li>Home</li>
+                        <li>Home</li>
+                        <li>Home</li>
+                    </ul>
+                </div>
+
+                <div>
+
+                    <ul>
+                        <li><b>Home</b></li>
+                        <li>Home</li>
+                        <li>Home</li>
+                        <li>Home</li>
+                        <li>Home</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    {{-- ----------------------------- --}}
 
     <!--js-->
     <script src="{{ asset('Frontend/assets/vendors/jquery/jquery-3.6.0.min.js') }}"></script>
