@@ -4,14 +4,22 @@
     margin: 0;
     font-family: 'Poppins';
     padding: 0;
+} body {
+    overflow-x: hidden;
+} section {
+    width: 100% !important;
 } .custom-cont {
     padding: 0 10em;
 }
 /* =============== Navbar =================== */
+.burger-menu {
+    display: none;
+}
 .header-cont {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 100%;
 }.header-cont ul li{
     height: 5.5em;
     display: flex;
@@ -22,6 +30,7 @@
 } 
 .header-cont ul{
     display: flex;
+    margin-bottom: 0;
 } img.logo-img {
     width: 12em;
 } .header-cont > div {
@@ -39,6 +48,7 @@
 .banner-cont {
     height: 100vh;
     display: grid;
+    width: 100vw !important;
     grid-template-columns: 4fr 2fr;
     background-size: cover;
     background-position: center;
@@ -185,3 +195,66 @@
 }
 /* =========================================== */
 
+/* ================ Testimonial ==================== */
+.testi-cont > div {
+    background-color: #ffeed6;
+
+}
+.testi-cont > div > div {
+    min-height: 50vh;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.testi-cont > div > div > div:nth-child(1){
+    display: flex;
+    border-right: 1px solid rgba(0,0,0,.2);
+    font-size: 30pt;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.testi-cont > div > div > div:nth-child(2){
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding-left: 1em;
+}
+
+/* =========================================== */
+
+
+/* ============== Responsive ==================== */
+@media screen and (max-width: 1188px) {
+    .project-cont {
+        grid-template-columns: 1fr;
+    } .project-disc li {
+        width: 100%;
+    } .img-div {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 1029px) {
+    .header-cont div , .header-cont ul {
+        display: none;
+    } .burger-menu {
+        display: block !important;
+        background-color: white !important;
+        width: fit-content !important;
+    }
+}
+@media screen and (max-width: 1178px) {
+    .service-cont > div {
+        grid-template-columns: auto;
+    }   
+}
+@media screen and (max-width: 1178px) {
+    .footer-cont {
+        grid-template-columns: auto;
+    } .foot-menu {
+        margin-top: 2em;
+    }
+}
+
+/* =========================================== */

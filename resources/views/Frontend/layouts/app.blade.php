@@ -30,6 +30,8 @@
 
     <!-- Fonts Awesome CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('Frontend/assets/vendors/fontawesome/css/all.min.css') }}">
+    {{-- Bootstrap --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <!-- jquery-ui css -->
     <link rel="stylesheet" type="text/css" href="{{ asset('Frontend/assets/vendors/jquery-ui/jquery-ui.min.css') }}">
     {{-- Css --}}
@@ -44,10 +46,13 @@
                 <li>Home</li>
                 <li>About</li>
                 <li>Blog</li>
-                <li>Vacency</li>
+                <li>Vacancy</li>
             </ul>
             <div>
                 Contact Us <i class="fas fa-arrow-right"></i>
+            </div>
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
             </div>
         </div>
     </section>
@@ -102,6 +107,8 @@
     </section>
     {{-- ----------------------------- --}}
 
+    {{-- bootstrap js --}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <!--js-->
     <script src="{{ asset('Frontend/assets/vendors/jquery/jquery-3.6.0.min.js') }}"></script>
     <script src="{{ asset('Frontend/assets/additional/jquery.lazy.min.js') }}" defer></script>

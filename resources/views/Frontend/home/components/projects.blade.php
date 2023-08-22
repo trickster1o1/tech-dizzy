@@ -21,13 +21,13 @@
 
             </ul>
         </div>
-        <div>
+        <div class="img-div">
             <img src="/uploads/fotoAsok.jpg" alt="-">
         </div>
 
 
 
-        <div>
+        <div class="img-div">
             <img src="/uploads/fotoSris.jpg" alt="-">
         </div>
         <div class="project-disc">
