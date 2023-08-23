@@ -11,7 +11,7 @@ class Service extends Model
 
     protected $table = 'services';
 
-    protected $fillable = ['title', 'slug', 'thumb_image', 'banner_image', 'is_featured', 'status', 'gallery_id', 'related_services', 'short_description', 'description', 'order_by', 'meta_key', 'meta_description', 'fb_title', 'fb_description', 'fb_image', 'twitter_title', 'twitter_description', 'twitter_image','icon_class','featured_image',
+    protected $fillable = ['title','link', 'slug', 'thumb_image', 'banner_image', 'is_featured', 'status', 'gallery_id', 'related_services', 'short_description', 'description', 'order_by', 'meta_key', 'meta_description', 'fb_title', 'fb_description', 'fb_image', 'twitter_title', 'twitter_description', 'twitter_image','icon_class','featured_image',
         'created_by','updated_by',
     ];
 

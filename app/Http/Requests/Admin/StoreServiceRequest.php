@@ -28,6 +28,7 @@ class StoreServiceRequest extends FormRequest
             //
             'title' => ['required', new UniqueSlug],
             'slug' => ['required', new UniqueSlug],
+            'link' => 'nullable',
             'thumb_image' => 'nullable',
             'banner_image' => 'nullable',
             'featured_image' => 'nullable',
