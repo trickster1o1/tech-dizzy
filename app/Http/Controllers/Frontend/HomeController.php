@@ -9,6 +9,7 @@ use App\Models\Admin\CounterInformation;
 use App\Models\Admin\HomeSetting;
 use App\Models\Admin\Page;
 use App\Models\Admin\Program;
+use App\Models\Admin\Project;
 use App\Models\Admin\Service;
 use App\Models\Admin\Supporter;
 use App\Models\Admin\Testimonials;
@@ -34,6 +35,7 @@ class HomeController extends Controller
         $this->data['blogs']        = Blog::select('blogs.*',\DB::raw("(SELECT count(*) from blogs_comments where blog_id = blogs.id AND status='active' ) as total_comment"))->where('status','active')->where(strtolower('is_featured'),'yes')->orderBy('order_by','ASC')->take(3)->get();
         $this->data['banners']      = Banner::where('status','active')->orderBy('order_by','ASC')->get();
         $this->data['services']     = Service::where('status','active')->where(strtolower('is_featured'),'yes')->orderBy('order_by','ASC')->get();
+        $this->data['projects']     = Project::where('status','active')->where(strtolower('is_featured'),'yes')->orderBy('order_by','ASC')->get();
         $this->data['programs']     = Program::where('status','active')->where(strtolower('is_featured'),'yes')->orderBy('order_by','ASC')->get();
         $this->data['testimonials'] = Testimonials::where('status','active')->orderBy('id','ASC')->get();
                 

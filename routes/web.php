@@ -30,6 +30,7 @@ use App\Http\Controllers\Admin\PaymentController;
 use App\Http\Controllers\Admin\PaymentSettingController;
 use App\Http\Controllers\Admin\PopupController;
 use App\Http\Controllers\Admin\ProgramController;
+use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\SiteMenuController;
@@ -75,6 +76,7 @@ Route::group(['middleware' => 'auth'], function () {
         'admin/popups' => PopupController::class,
         'admin/notices' => NoticeController::class,
         'admin/services' => ServiceController::class,
+        'admin/projects' => ProjectController::class,
         'admin/team-members' => TeamMemberController::class,
         'admin/faqs' => FaqController::class,
         'admin/counter_infos' => CounterInfoController::class,
@@ -141,6 +143,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/popup_data', [PopupController::class, 'popup_data']);
     Route::get('/notice_data', [NoticeController::class, 'notice_data']);
     Route::get('/service_data', [ServiceController::class, 'service_data']);
+    Route::get('/project_data', [ProjectController::class, 'project_data']);
     Route::get('/team_data', [TeamMemberController::class, 'team_data']);
     Route::get('/faq_data', [FaqController::class, 'faq_data']);
     Route::get('/counter_data', [CounterInfoController::class, 'counter_data']);

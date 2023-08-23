@@ -2,7 +2,7 @@
     <div class="service-cont custom-cont">
         <h1>Our Services</h1>
         <div>
-            <div>
+            {{-- <div>
                 <div><img src="https://assets.website-files.com/60d0373c3fb64c8110309e5f/60d0a0dfa01b14a49a7b1188_image%207.svg" alt=""></div>
                 <h3>Product development</h3>
                 <p>
@@ -27,8 +27,21 @@
                     We help you develop your brand identity and create a cross-platform messaging strategy.
                 </p>
                 <a href="#">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
+            </div> --}}
+            @foreach ($services as $service)
+                <div>
+
+                    <div><img
+                            src="{{$service->thumb_image ? '/'.$service->thumb_image : '/uploads/service.svg'}}"
+                            alt=""></div>
+                    <h3>{{$service->title}}</h3>
+                    <p>
+                        {{strip_tags($service->description)}}    
+                    </p>
+                    <a href="#">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            @endforeach
+
             {{-- <div>
 
                 <div><img src="https://assets.website-files.com/60d0373c3fb64c8110309e5f/60d0a0dfa01b14a49a7b1188_image%207.svg" alt=""></div>
