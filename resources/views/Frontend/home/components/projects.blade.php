@@ -30,9 +30,6 @@
             @endphp
         @endforeach
         {{-- 
-
-
-
         <div class="img-div">
             <img src="/uploads/fotoSris.jpg" alt="-">
         </div>

@@ -51,9 +51,21 @@
             <div>
                 Contact Us <i class="fas fa-arrow-right"></i>
             </div>
-            <div class="burger-menu">
+            <div class="burger-menu" id="b-m">
                 <i class="fas fa-bars"></i>
             </div>
+        </div>
+
+        <div class="mobile-nav" id="mn">
+            <span id="cross">
+                X
+            </span>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Blog</li>
+                <li>Vacancy</li>
+            </ul>
         </div>
     </section>
     {{-- .......... Header ........... --}}
@@ -117,7 +129,17 @@
 
     @yield('ajax-script')
 
+    <script>
+        let c = document.getElementById('cross');
+        let b = document.getElementById('b-m');
+        let m = document.getElementById('mn');
+        c.addEventListener('click', () => {
+            m.style.display = 'none';
 
+        });
+        b.addEventListener('click', () => {
+            m.style.display = 'flex';
+        });
+    </script>
 </body>
-
 </html>
