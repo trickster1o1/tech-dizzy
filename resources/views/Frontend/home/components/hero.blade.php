@@ -2,15 +2,19 @@
     <div class="banner-cont" style="background-image: url('/uploads/banner.jpg')">
         <div>
             <div class="hero-cont">
-                <h1>Work faster, together with Tech Dizzy.</h1>
+                <h1>{{$banners->title}}</h1>
                 <p>
-                    Tech Dizzy is a cheerful, no-nonsense Tech Services for fast-growing businesses and startups.
+                    {{$banners->tag_line}}
                 </p>
-                <button>Get Started <i class="fas fa-arrow-right"></i></button>
+                @if ($banners->primary_button_title)
+                <a class="custom-btn">{{$banners->primary_button_title}} <i class="fas fa-arrow-right"></i></a>                    
+                @endif
             </div>
         </div>
         <div>
-            <img src="uploads/fotoSoh.jpg" alt="-">
+            @if ($banners->image)
+                <img src="/{{$banners->image}}" alt="-">            
+            @endif
         </div>
     </div>
 </section>

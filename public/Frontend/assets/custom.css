@@ -91,7 +91,9 @@
 }.hero-cont p {
     padding-top: 1em;
     font-size: 24px;
-} .banner-cont button {
+} .banner-cont a {
+    display: block;
+    text-decoration: none;
     align-self: flex-start;
     margin-top: 1em;
     border: none;
