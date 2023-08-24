@@ -7,61 +7,66 @@
     <section class="blog-page">
         <div class="container">
             <div class="row">
-                {{-- @if (count($blogs)) --}}
+                @if (count($blogs))
+                    <div class="blog-cont custom-cont">
+                        <div class="blog-filter">
+                            <span class="active-filter">All Blogs</span>
+                            <span>Digital Board</span>
+                            <span>Drones</span>
+                            <span>Marketing</span>
+                        </div>
 
-                <div class="blog-cont custom-cont">
-                    <div class="blog-filter">
-                        <span class="active-filter">All Blogs</span>
-                        <span>Digital Board</span>
-                        <span>Drones</span>
-                        <span>Marketing</span>
+                        <div class="blog-body">
+                            @foreach ($blogs as $blog)
+                                <div>
+                                    <div class="blog-img"><img
+                                            src="https://assets.website-files.com/60d4b22d82365168e8d2fc46/60d4b46061545264cdfe2f55_1624552538685-image16-p-500.jpeg"
+                                            alt="error404"></div>
+                                    <div class="blog-cat">{{$blog->getCat($blog->category)}}</div>
+                                    <div class="blog-desc">
+                                        <h4>{{$blog->title}}</h4>
+                                        <p><span class="blog-auth">{{$blog->author}}</span> <span
+                                                class="blog-time">12min</span></p>
+
+                                    </div>
+                                </div>
+                            @endforeach
+{{-- 
+                            <div>
+                                <div class="blog-img"><img
+                                        src="https://assets.website-files.com/60d4b22d82365168e8d2fc46/60d4b46061545264cdfe2f55_1624552538685-image16-p-500.jpeg"
+                                        alt="error404"></div>
+                                <div class="blog-cat">design</div>
+                                <div class="blog-desc">
+                                    <h4>Joseph Schwartz's Foolproof Design Tips</h4>
+                                    <p><span class="blog-auth">Nischal Tuladhar</span> <span class="blog-time">12min</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="blog-img"><img
+                                        src="https://assets.website-files.com/60d4b22d82365168e8d2fc46/60d4b46061545264cdfe2f55_1624552538685-image16-p-500.jpeg"
+                                        alt="error404"></div>
+                                <div class="blog-cat">design</div>
+                                <div class="blog-desc">
+                                    <h4>Joseph Schwartz's Foolproof Design Tips</h4>
+                                    <p><span class="blog-auth">Nischal Tuladhar</span> <span class="blog-time">12min</span>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div> --}}
                     </div>
 
-                    <div class="blog-body">
-                        <div>
-                            <div class="blog-img"><img
-                                    src="https://assets.website-files.com/60d4b22d82365168e8d2fc46/60d4b46061545264cdfe2f55_1624552538685-image16-p-500.jpeg"
-                                    alt="error404"></div>
-                            <div class="blog-cat">design</div>
-                            <div class="blog-desc">
-                                <h4>Joseph Schwartz's Foolproof Design Tips</h4>
-                                <p><span class="blog-auth">Nischal Tuladhar</span> <span class="blog-time">12min</span></p>
-
-                            </div>
-                        </div>
-                        <div>
-                            <div class="blog-img"><img
-                                    src="https://assets.website-files.com/60d4b22d82365168e8d2fc46/60d4b46061545264cdfe2f55_1624552538685-image16-p-500.jpeg"
-                                    alt="error404"></div>
-                            <div class="blog-cat">design</div>
-                            <div class="blog-desc">
-                                <h4>Joseph Schwartz's Foolproof Design Tips</h4>
-                                <p><span class="blog-auth">Nischal Tuladhar</span> <span class="blog-time">12min</span></p>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="blog-img"><img
-                                    src="https://assets.website-files.com/60d4b22d82365168e8d2fc46/60d4b46061545264cdfe2f55_1624552538685-image16-p-500.jpeg"
-                                    alt="error404"></div>
-                            <div class="blog-cat">design</div>
-                            <div class="blog-desc">
-                                <h4>Joseph Schwartz's Foolproof Design Tips</h4>
-                                <p><span class="blog-auth">Nischal Tuladhar</span> <span class="blog-time">12min</span></p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {{-- <div class="d-flex justify-content-center pt-4" style="padding-left: 1.5em;">
+                    {{-- <div class="d-flex justify-content-center pt-4" style="padding-left: 1.5em;">
                 {{$page->links()}}
 
-            </div> --}}
-                {{-- @else 
-                <div class="col-12 text-center" style="height:20vh;padding:15em 0;">
-                    <h2>No Blogs Available</h2>
-                </div>
-            @endif --}}
+                </div> --}}
+                @else
+                    <div class="col-12 text-center" style="height:20vh;padding:15em 0;">
+                        <h2>No Blogs Available</h2>
+                    </div>
+                @endif
             </div>
         </div>
     </section>

@@ -58,4 +58,8 @@ class Blog extends Model
     function comments() {
         return $this->hasMany(BlogsComment::class);
     }
+
+    function getCat($id) {
+        return Category::where('id',$id)->first()->title;
+    }
 }
