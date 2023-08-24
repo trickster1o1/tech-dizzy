@@ -199,6 +199,10 @@ Route::get('/donate-now/{id}', [PageController::class, 'getDonnerForm']);
 Route::get('area/{slug}', [PageController::class, 'thematicDetail']);
 
 
+Route::get('/blogs', [PageController::class, 'getBlogs']);
+
+
+
 //pages and details route
 Route::get('/{link}', [PageController::class, 'getLink']);
 Route::get('/{link}/{slug}', [PageController::class, 'getDetail']);

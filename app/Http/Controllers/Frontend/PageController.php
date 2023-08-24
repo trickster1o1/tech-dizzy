@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Requests\VolunteerFormRequest;
+use App\Models\Admin\Blog;
 use App\Models\Admin\InternalLinks;
 use App\Models\Admin\Volunteer;
 use Illuminate\Http\Request;
@@ -13,6 +14,23 @@ class PageController extends Controller
 {
     // Dynamic link fetch functions -------------------------------
 
+    function getBlogs() {
+
+        try {
+            // $this->data['defaults'] = DEFAULT_IMAGE_PATH;
+            $this->data['blogs'] = Blog::where('status','active')->paginate(2);
+            
+            $this->data['linkData'] = InternalLinks::where('status','active')->where('slug','blog')->first();
+            $meta = get_meta_detail($this->data['siteSetting'],$this->data['linkData']);
+            
+            return view('Frontend.page.Blog' , 
+            $this->data + $meta
+        );
+        } catch (\Throwable $th) {
+            $this->data['linkData'] = InternalLinks::where('status','active')->where('slug','error404')->first();
+            return view('Frontend.error.error404' , $this->data);
+        }
+    }
     function getLink($link) {
         $this->siteStatus();
         if($link) {
