@@ -14,6 +14,29 @@ class PageController extends Controller
 {
     // Dynamic link fetch functions -------------------------------
 
+
+    function getBlog($slug) {
+        $this->data['blog'] = Blog::where('status','active')->where('slug',$slug)->first();
+        $this->siteStatus();
+
+        try {
+
+            if($this->data['blog']){
+                $meta = get_meta_detail($this->data['siteSetting'],$this->data['blog']);      
+                return view('Frontend.page.detail.blog' , 
+                $this->data+$meta);
+            }else{
+                $this->data['linkData'] = InternalLinks::where('status','active')->where('slug','error404')->first();
+                $meta = get_meta_detail($this->data['siteSetting'],$this->data['linkData']); 
+                return view('Frontend.error.error404' , $this->data+$meta);
+            }
+        } catch (\Throwable $th) {
+            $this->data['linkData'] = InternalLinks::where('status','active')->where('slug','error404')->first();
+            $meta = get_meta_detail($this->data['siteSetting'],$this->data['linkData']); 
+            return view('Frontend.error.error404' , $this->data+$meta);
+        }
+    }
+
     function getBlogs() {
 
         try {
@@ -297,7 +320,7 @@ class PageController extends Controller
 
         $this->data['linkData'] = InternalLinks::where('status','active')->where('slug','contact-us')->first();        
         $meta = get_meta_detail($this->data['siteSetting'],$this->data['linkData']);
-        return view('Frontend.page.contactsForm' , 
+        return view('Frontend.page.contact' , 
             $this->data+$meta
         );
     }  

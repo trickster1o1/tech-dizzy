@@ -1,7 +1,7 @@
 @extends('Frontend.layouts.app')
 @section('body')
     <!--Page Header Start-->
-    @include('Frontend.page.includes.page', [($title = 'Blogs')])
+    @include('Frontend.page.includes.page', [$title = 'Blog'])
     <!--Page Header End-->
     <!--Blog Page Start-->
     <section class="blog-page">
@@ -19,19 +19,21 @@
                         <div class="blog-body">
                             @foreach ($blogs as $blog)
                                 <div>
-                                    <div class="blog-img"><img
-                                            src="https://assets.website-files.com/60d4b22d82365168e8d2fc46/60d4b46061545264cdfe2f55_1624552538685-image16-p-500.jpeg"
-                                            alt="error404"></div>
-                                    <div class="blog-cat">{{$blog->getCat($blog->category)}}</div>
-                                    <div class="blog-desc">
-                                        <h4>{{$blog->title}}</h4>
-                                        <p><span class="blog-auth">{{$blog->author}}</span> <span
-                                                class="blog-time">12min</span></p>
+                                    <a href="/blogs/{{ $blog->slug }}">
+                                        <div class="blog-img"><img
+                                                src="https://assets.website-files.com/60d4b22d82365168e8d2fc46/60d4b46061545264cdfe2f55_1624552538685-image16-p-500.jpeg"
+                                                alt="error404"></div>
+                                        <div class="blog-cat">{{ $blog->getCat($blog->category) }}</div>
+                                        <div class="blog-desc">
+                                            <h4>{{ $blog->title }}</h4>
+                                            <p><span class="blog-auth">{{ $blog->author }}</span> <span
+                                                    class="blog-time">12min</span></p>
 
-                                    </div>
+                                        </div>
+                                    </a>
                                 </div>
                             @endforeach
-{{-- 
+                            {{-- 
                             <div>
                                 <div class="blog-img"><img
                                         src="https://assets.website-files.com/60d4b22d82365168e8d2fc46/60d4b46061545264cdfe2f55_1624552538685-image16-p-500.jpeg"
@@ -56,16 +58,16 @@
                                 </div>
                             </div>
                         </div> --}}
-                    </div>
+                        </div>
 
-                    {{-- <div class="d-flex justify-content-center pt-4" style="padding-left: 1.5em;">
+                        {{-- <div class="d-flex justify-content-center pt-4" style="padding-left: 1.5em;">
                 {{$page->links()}}
 
                 </div> --}}
-                @else
-                    <div class="col-12 text-center" style="height:20vh;padding:15em 0;">
-                        <h2>No Blogs Available</h2>
-                    </div>
+                    @else
+                        <div class="col-12 text-center" style="height:20vh;padding:15em 0;">
+                            <h2>No Blogs Available</h2>
+                        </div>
                 @endif
             </div>
         </div>

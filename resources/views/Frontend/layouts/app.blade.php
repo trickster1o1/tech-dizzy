@@ -41,16 +41,16 @@
     {{-- .......... Header ........... --}}
     <section>
         <div class="header-cont custom-cont">
-            <img class="logo-img" src="{{ $siteSetting ? $siteSetting->primary_logo : '/' }}" alt="LOGO">
+            <img class="logo-img" src="{{ $siteSetting ? '/'.$siteSetting->primary_logo : '/' }}" alt="LOGO">
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Blog</li>
-                <li>Vacancy</li>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="/blogs">Blogs</a></li>
+                <li><a href="#">Vacency</a></li>
             </ul>
-            <div>
+            <a class="custom-btn">
                 Contact Us <i class="fas fa-arrow-right"></i>
-            </div>
+            </a>
             <div class="burger-menu" id="b-m">
                 <i class="fas fa-bars"></i>
             </div>

@@ -200,6 +200,7 @@ Route::get('area/{slug}', [PageController::class, 'thematicDetail']);
 
 
 Route::get('/blogs', [PageController::class, 'getBlogs']);
+Route::get('/blogs/{slug}', [PageController::class, 'getBlog']);
 
 
 

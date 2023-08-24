@@ -25,13 +25,20 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-}.header-cont ul li{
+}.header-cont .custom-btn {
+    background-color: #dfede7;
+    color: black;
+    font-weight: 600;
+} .header-cont ul li{
     height: 5.5em;
     display: flex;
     justify-content: center;
     align-items: center;
     list-style-type: none;
     margin-right: 2em;
+} .header-cont ul li a {
+    text-decoration: none;
+    color: black;
 } 
 .header-cont ul{
     display: flex;
@@ -91,7 +98,7 @@
 }.hero-cont p {
     padding-top: 1em;
     font-size: 24px;
-} .banner-cont a {
+} .custom-btn {
     display: block;
     text-decoration: none;
     align-self: flex-start;
@@ -104,7 +111,7 @@
     border-radius: 30px;
     padding: 1em 2em;
     font-weight: bold;
-} .banner-cont button i {
+} .custom-btn i {
     margin-left: 1em;
     font-weight: bold;
     font-size: 8pt;
@@ -325,11 +332,85 @@
     padding-bottom: 1em;
 } .blog-desc p span.blog-time {
     float: right;
+}.blog-body a {
+    text-decoration: none;
+    color:black;
 }
 
 /* =========================================== */
 
 
+/* ================ Blog Detail ============== */
+
+.blog-detail {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+/* ============================================= */
+
+/* ================ Blog Detail ============== */
+
+.contact-cont {
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8em;
+}.contact-cont > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    min-height: 90vh;
+} .contact-cont >div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+} .cont-detail {
+    align-self: flex-start;
+    display: flex;
+    margin-bottom: 2em;
+    flex-direction: row;
+} .cont-detail > span {
+    display: flex;
+    flex-direction: column;
+} .cont-detail > span:nth-child(1) {
+    background-color: white;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    height: 4em;
+    width: 4em;
+    margin-right: 1em;
+} .cont-detail small {
+    font-weight: bold;
+    margin-bottom: .5em;
+} .contact-cont > div > div:nth-child(1) {
+    background-color: #bde5fe;
+    padding: 2em;
+} .contact-cont > div > div:nth-child(1) p {
+    margin-bottom: 2em;
+} .contact-cont > div > div:nth-child(2) {
+    background-color: #dfede7;
+    
+} .cont-form {
+    background-color: white;
+    padding: 1em;
+} .cont-form > div {
+    margin-bottom: 1em;
+} .cont-form input , textarea{
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: #dfede7;
+    padding: 1em;
+} textarea {
+    resize: none;
+    height: 200px;
+}
+
+/* =========================================== */
 
 
 /* ============== Responsive ==================== */
