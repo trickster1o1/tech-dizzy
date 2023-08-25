@@ -21,6 +21,7 @@
 .header-cont {
     display: flex;
     position: fixed;
+    z-index: 100;
     background-color: white;
     justify-content: space-between;
     align-items: center;
@@ -55,6 +56,7 @@
     font-weight: bold;
 }.mobile-nav {
     position: fixed;
+    z-index: 105;
     width: 100%;
     height: 100vh;
     background-color: white;
@@ -72,6 +74,8 @@
     position: fixed;
     top: 15px;
     right: 15%;
+}.mobile-menu {
+    display: none;
 }
 
 
@@ -464,8 +468,6 @@
 @media screen and (max-width: 920px) {
     .custom-cont {
         padding: 0 2em;
-    }.header-cont {
-        bottom: 0;
     }.banner-cont h1 {
         font-size: 30pt;
         line-height: 40px;
@@ -503,6 +505,19 @@
         font-size: 30px;
     }  .contact-cont { 
         padding-top: 4em;
+    } .header-cont  {
+        display: none;
+    } .mobile-menu {
+        position: fixed;
+        display: flex !important;
+        justify-content: space-between;
+        bottom: 0;
+        width: 100%;
+        background-color: white;
+        z-index: 100;
+    } .mobile-menu > div {
+        padding: 1em 1.5em;
+        
     }
 }
 

@@ -31,7 +31,8 @@
     <!-- Fonts Awesome CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('Frontend/assets/vendors/fontawesome/css/all.min.css') }}">
     {{-- Bootstrap --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <!-- jquery-ui css -->
     <link rel="stylesheet" type="text/css" href="{{ asset('Frontend/assets/vendors/jquery-ui/jquery-ui.min.css') }}">
     {{-- Css --}}
@@ -41,7 +42,7 @@
     {{-- .......... Header ........... --}}
     <section>
         <div class="header-cont custom-cont">
-            <img class="logo-img" src="{{ $siteSetting ? '/'.$siteSetting->primary_logo : '/' }}" alt="LOGO">
+            <img class="logo-img" src="{{ $siteSetting ? '/' . $siteSetting->primary_logo : '/' }}" alt="LOGO">
             <ul>
                 <li><a href="/">Home</a></li>
                 {{-- <li><a href="#">About</a></li> --}}
@@ -66,6 +67,12 @@
                 <li>Blog</li>
                 {{-- <li>Vacancy</li> --}}
             </ul>
+        </div>
+        <div class="mobile-menu">
+            <div><i class="fas fa-home"></i></div>
+            <div><i class="fas fa-home"></i></div>
+            <div><i class="fas fa-home"></i></div>
+            <div><i class="fas fa-home"></i></div>
         </div>
     </section>
     {{-- .......... Header ........... --}}
@@ -92,7 +99,7 @@
                     </ul>
                 </div>
 
-                 <div>
+                <div>
 
                     <ul>
                         <li><b><a href="/contact-us">Contact Us</a></b></li>
@@ -103,7 +110,7 @@
                     </ul>
                 </div>
 
-               {{-- <div>
+                {{-- <div>
 
                     <ul>
                         <li><b>Home</b></li>
@@ -113,14 +120,16 @@
                         <li>Home</li>
                     </ul>
                 </div> --}}
-                
+
             </div>
         </div>
     </section>
     {{-- ----------------------------- --}}
 
     {{-- bootstrap js --}}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
     <!--js-->
     <script src="{{ asset('Frontend/assets/vendors/jquery/jquery-3.6.0.min.js') }}"></script>
     <script src="{{ asset('Frontend/assets/additional/jquery.lazy.min.js') }}" defer></script>
@@ -142,4 +151,5 @@
         });
     </script>
 </body>
+
 </html>
