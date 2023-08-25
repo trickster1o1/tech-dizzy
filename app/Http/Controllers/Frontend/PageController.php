@@ -16,8 +16,8 @@ class PageController extends Controller
 
 
     function getBlog($slug) {
-        $this->data['blog'] = Blog::where('status','active')->where('slug',$slug)->first();
         $this->siteStatus();
+        $this->data['blog'] = Blog::where('status','active')->where('slug',$slug)->first();
 
         try {
 
@@ -162,44 +162,24 @@ class PageController extends Controller
 
     function getAbout() {
         $this->siteStatus();
+        // $this->data['about'] = Blog::where('status','active')->where('slug',$slug)->first();
 
-            $this->data['page'] = \App\Models\Admin\IntroductionSetting::first();
-            $this->data['supporters'] = [];
-            $this->data['testimonials'] = [];
-            $this->data['volunteers'] = [];
-            $this->data['tabs'] = [];
-            if ($this->data['page'] && $this->data['page']->supporter) {
-                $this->data['supporters'] = \App\Models\Admin\Supporter::where('status','active')->orderBy('order_by','desc')->get();
+        try {
+            $this->data['about'] = false;
+            if($this->data['about']){
+                $meta = get_meta_detail($this->data['siteSetting'],$this->data['about']);      
+                return view('Frontend.page.about' , 
+                $this->data+$meta);
+            }else{
+                $this->data['linkData'] = InternalLinks::where('status','active')->where('slug','error404')->first();
+                $meta = get_meta_detail($this->data['siteSetting'],$this->data['linkData']); 
+                return view('Frontend.error.error404' , $this->data+$meta);
             }
-            if ($this->data['page'] && $this->data['page']->testimonials) {
-                $this->data['testimonials'] = \App\Models\Admin\Testimonials::where('status','active')->orderBy('id','desc')->get();
-            }
-            
-            if ($this->data['page'] && $this->data['page']->volunteer) {
-                $this->data['volunteers'] = \App\Models\Admin\Volunteer::where('status','active')->orderBy('order_by','ASC')->take(4)->get();
-            }
-
-            if($this->data['page']) {
-                if($this->data['page']->tabA_content) {
-                    $tab = \App\Models\Admin\Page::where('id',$this->data['page']->tabA_content)->first();
-                    array_push($this->data['tabs'],$tab);
-                }
-                if($this->data['page']->tabB_content) {
-                    $tab = \App\Models\Admin\Page::where('id', $this->data['page']->tabB_content)->first();
-                    array_push($this->data['tabs'],$tab);
-                    
-                }if($this->data['page']->tabC_content) {
-                    $tab = \App\Models\Admin\Page::where('id', $this->data['page']->tabC_content)->first();
-                    array_push($this->data['tabs'],$tab);
-                    
-                }
-            }
-
-            $this->data['linkData'] = InternalLinks::where('status','active')->whereIn('slug',array('about','introduction'))->first();
-            $meta = get_meta_detail($this->data['siteSetting'],$this->data['linkData']);
-            
-            return view('Frontend.page.introduction' , 
-            $this->data + $meta  ); 
+        } catch (\Throwable $th) {
+            $this->data['linkData'] = InternalLinks::where('status','active')->where('slug','error404')->first();
+            $meta = get_meta_detail($this->data['siteSetting'],$this->data['linkData']); 
+            return view('Frontend.error.error404' , $this->data+$meta);
+        }    
     }
     // Related services --------------------
     function relatedService($id) {

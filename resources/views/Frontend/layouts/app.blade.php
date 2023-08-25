@@ -46,9 +46,9 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="/blogs">Blogs</a></li>
-                <li><a href="#">Vacency</a></li>
+                {{-- <li><a href="#">Vacency</a></li> --}}
             </ul>
-            <a class="custom-btn">
+            <a class="custom-btn" href="/contact-us">
                 Contact Us <i class="fas fa-arrow-right"></i>
             </a>
             <div class="burger-menu" id="b-m">
@@ -64,7 +64,7 @@
                 <li>Home</li>
                 <li>About</li>
                 <li>Blog</li>
-                <li>Vacancy</li>
+                {{-- <li>Vacancy</li> --}}
             </ul>
         </div>
     </section>
