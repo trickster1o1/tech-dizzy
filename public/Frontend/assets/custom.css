@@ -212,6 +212,10 @@
 }
 
 /* ================ Footer ==================== */
+.footer-cont a {
+    text-decoration: none;
+    color: white;
+}
 .footer-cont {
     display: grid;
     grid-template-columns: auto auto;
@@ -357,7 +361,7 @@
     justify-content: center;
     align-items: center;
     padding-top: 8em;
-}.contact-cont > div {
+} .contact-cont > div {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
@@ -460,6 +464,8 @@
 @media screen and (max-width: 920px) {
     .custom-cont {
         padding: 0 2em;
+    }.header-cont {
+        bottom: 0;
     }.banner-cont h1 {
         font-size: 30pt;
         line-height: 40px;

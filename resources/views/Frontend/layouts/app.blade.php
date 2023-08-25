@@ -44,7 +44,7 @@
             <img class="logo-img" src="{{ $siteSetting ? '/'.$siteSetting->primary_logo : '/' }}" alt="LOGO">
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="#">About</a></li>
+                {{-- <li><a href="#">About</a></li> --}}
                 <li><a href="/blogs">Blogs</a></li>
                 {{-- <li><a href="#">Vacency</a></li> --}}
             </ul>
@@ -62,7 +62,7 @@
             </span>
             <ul>
                 <li>Home</li>
-                <li>About</li>
+                {{-- <li>About</li> --}}
                 <li>Blog</li>
                 {{-- <li>Vacancy</li> --}}
             </ul>
@@ -85,14 +85,25 @@
                 <div>
                     <ul>
                         <li><b>Home</b></li>
-                        <li>Home</li>
-                        <li>Home</li>
-                        <li>Home</li>
-                        <li>Home</li>
+                        <li>About</li>
+                        <li>Blogs</li>
+                        {{-- <li>Home</li>
+                        <li>Home</li> --}}
                     </ul>
                 </div>
 
-                <div>
+                 <div>
+
+                    <ul>
+                        <li><b><a href="/contact-us">Contact Us</a></b></li>
+                        <li><a href="mailto:info@bisava.tech" target="_blank">info@bisava.tech</a></li>
+                        <li><a href="tel:9810110101">+977-9810110101</a></li>
+                        {{-- <li>Home</li>
+                        <li>Home</li> --}}
+                    </ul>
+                </div>
+
+               {{-- <div>
 
                     <ul>
                         <li><b>Home</b></li>
@@ -101,18 +112,7 @@
                         <li>Home</li>
                         <li>Home</li>
                     </ul>
-                </div>
-
-                <div>
-
-                    <ul>
-                        <li><b>Home</b></li>
-                        <li>Home</li>
-                        <li>Home</li>
-                        <li>Home</li>
-                        <li>Home</li>
-                    </ul>
-                </div>
+                </div> --}}
                 
             </div>
         </div>
