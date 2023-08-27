@@ -39,7 +39,6 @@
             </span>
             <h1>We're all about the <br>power of optimization.</h1>
             <ul class="right-list">
-
                 <li>
                     <div class="check"><i class="fas fa-check-circle"></i></div>
                     <div>Stories that speak to who you are as a brand</div>
@@ -52,8 +51,6 @@
                     <div class="check"><i class="fas fa-check-circle"></i></div>
                     <div>Stories that speak to who you are as a brand</div>
                 </li>
-
-
             </ul>
         </div> --}}
     </div>

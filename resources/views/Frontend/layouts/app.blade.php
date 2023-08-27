@@ -69,10 +69,10 @@
             </ul>
         </div>
         <div class="mobile-menu">
-            <div><i class="fas fa-home"></i></div>
-            <div><i class="fas fa-home"></i></div>
-            <div><i class="fas fa-home"></i></div>
-            <div><i class="fas fa-home"></i></div>
+            <div><a href="/"><i class="fas fa-home"></i></a></div>
+            <div><a href="/about-us" class={{strpos(url::current(), 'about-us') ? 'active' : null}}><i class="fas fa-address-card"></i></a></div>
+            <div><a href="/blogs" class={{strpos(url::current(), 'blogs') ? 'active' : null}}><i class="fab fa-blogger-b"></i></a></div>
+            <div><a href="/contact-us" class={{strpos(url::current(), 'contact-us') ? 'active' : null}}><i class="fas fa-id-badge"></i></a></div>
         </div>
     </section>
     {{-- .......... Header ........... --}}
@@ -91,9 +91,9 @@
             <div class="foot-menu">
                 <div>
                     <ul>
-                        <li><b>Home</b></li>
+                        <li><b><a href="/">Home</a></b></li>
                         <li>About</li>
-                        <li>Blogs</li>
+                        <li><a href="/blogs">Blogs</a></li>
                         {{-- <li>Home</li>
                         <li>Home</li> --}}
                     </ul>

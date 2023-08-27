@@ -518,6 +518,11 @@
     } .mobile-menu > div {
         padding: 1em 1.5em;
         
+    }.mobile-menu a {
+        color: black;
+        text-decoration: none;
+    } .mobile-menu a.active {
+        color: blue !important;
     }
 }
 
