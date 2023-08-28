@@ -1,4 +1,7 @@
 @extends('Frontend.layouts.app')
 @section('body')
-    <h1>working</h1>
+@include('Frontend.page.includes.page', [$title = 'About Us'])
+    <div class="about-cont custom-cont">
+        {!! $about->description !!}
+    </div>
 @endsection

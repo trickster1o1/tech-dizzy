@@ -171,7 +171,7 @@ Route::get('/area', [HomeController::class, 'thematicView']);
 
 //home route
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/about', [PageController::class, 'getAbout']);
+Route::get('/about-us', [PageController::class, 'getAbout']);
 Route::get('/introduction', [PageController::class, 'getAbout']);
 
 //payment route

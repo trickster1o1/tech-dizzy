@@ -162,12 +162,12 @@ class PageController extends Controller
 
     function getAbout() {
         $this->siteStatus();
-        // $this->data['about'] = Blog::where('status','active')->where('slug',$slug)->first();
+        $this->data['about'] = InternalLinks::where('status','active')->where('slug','about-us')->first();
 
         try {
-            $this->data['about'] = false;
             if($this->data['about']){
                 $meta = get_meta_detail($this->data['siteSetting'],$this->data['about']);      
+                
                 return view('Frontend.page.about' , 
                 $this->data+$meta);
             }else{

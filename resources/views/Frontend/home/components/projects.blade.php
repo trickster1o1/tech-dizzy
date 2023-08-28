@@ -12,17 +12,19 @@
             <div class="project-disc">
                 @if ($project->tagline)
                     <span class="project-slogan">
-                        {{$project->tagline}}
+                        {{ $project->tagline }}
                     </span>
                 @endif
                 <h1>{{ $project->title }}</h1>
                 <div @if ($flag % 2 == 0) class="right-list" @endif>
                     {!! $project->description !!}
+                    <a href="{{$project->link}}" target="_blank" class="custom-btn">Visit Site <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             @if ($flag % 2 != 0)
                 <div class="img-div">
-                    <img src="/uploads/fotoAsok.jpg" alt="-">
+                    <img src="/{{ $project->thumb_image }}" alt="-">
+
                 </div>
             @endif
             @php

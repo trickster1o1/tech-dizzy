@@ -45,7 +45,7 @@
             <img class="logo-img" src="{{ $siteSetting ? '/' . $siteSetting->primary_logo : '/' }}" alt="LOGO">
             <ul>
                 <li><a href="/">Home</a></li>
-                {{-- <li><a href="#">About</a></li> --}}
+                <li><a href="/about-us">About</a></li>
                 <li><a href="/blogs">Blogs</a></li>
                 {{-- <li><a href="#">Vacency</a></li> --}}
             </ul>
@@ -63,7 +63,7 @@
             </span>
             <ul>
                 <li>Home</li>
-                {{-- <li>About</li> --}}
+                <li>About</li>
                 <li>Blog</li>
                 {{-- <li>Vacancy</li> --}}
             </ul>
